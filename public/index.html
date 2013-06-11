@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    <section id="mainContent">
+        <h1>Todo</h1>
+        <input class="todoInput" type="text" placeholder="What do you need to do?" autofocus/>
+        <button class="addItem">Add</button>
+        <ul class="todoList" />
+    </section>
+
+    <div hidden="hidden" id="itemTemplate">
+        <li>
+            <div>
+                <input type="checkbox"/>
+                <label class="itemName"></label>
+                <button class="delete"></button>
+            </div>
+        </li>
+    </div>
+    <script src="js/persistence.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+body {
+    font: 24px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #4d4d4d;
+    background-color: #F8F8F8;
+    width: 530px;
+    margin: 0 auto;
+}
+
+#mainContent {
+    background: #FFFFF0;
+    background: #FFFFF0; /* Old browsers */
+    background: -moz-linear-gradient(top, #fffff7 0%, #fffff0 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffff7), color-stop(100%,#fffff0)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fffff7 0%,#fffff0 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fffff7 0%,#fffff0 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fffff7 0%,#fffff0 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #fffff7 0%,#fffff0 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffff7', endColorstr='#fffff0',GradientType=0 ); /* IE6-9 */
+    margin: 120px 0 40px 0;
+    border: 1px solid #ccc;
+    position: relative;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 0 4px 8px 0 #B8B8B8, 0 25px 50px 0 #D8D8D8;
+}
+
+#mainContent h1 {
+    position: absolute;
+    top: -140px;
+    width: 100%;
+    font-size: 70px;
+    text-align: center;
+    color: rgba(211, 211, 211, 0.28);
+    text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+}
+
+.todoInput {
+    padding: 16px 16px 16px 56px;
+    background: #fafaed;
+    box-shadow: none;
+    font-size: 24px;
+    width:357px;
+    border: 1px solid lightgrey;
+    margin:1px;
+}
+
+.addItem {
+    font-size: 24px;
+    padding: 6px 15px;
+    color: #333333;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    border: 1px solid #cccccc;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 10px;
+    margin: 5px 0;
+}
+
+.todoList li {
+    position:relative;
+}
+
+input[type="checkbox"] {
+    text-align: center;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+input[type="checkbox"]:after {
+    content: '✔';
+    line-height: 43px;
+    color: #d9d9d9;
+    text-shadow: 0 -1px 0 #bfbfbf;
+}
+
+input[type="checkbox"][checked="checked"]:after {
+    color: green;
+}
+
+.todoList li label {
+    padding: 5px;
+    margin-left: 45px;
+    display: block;
+    line-height: 1.2;
+    -webkit-transition: color 0.4s;
+    -moz-transition: color 0.4s;
+    -ms-transition: color 0.4s;
+    -o-transition: color 0.4s;
+    transition: color 0.4s;
+}
+
+.todoList li .done {
+    text-decoration: line-through;
+    color: #a9a9a9;
+}
+
+.todoList li:hover .delete {
+    display: block;
+}
+.delete:hover {
+    text-shadow: 0 0 1px #000, 0 0 10px rgba(159, 107, 107, 0.8);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.delete {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+.delete:after {
+    content: '✖';
+}
+
+#itemTemplate{
+    display: none;
+}
+
